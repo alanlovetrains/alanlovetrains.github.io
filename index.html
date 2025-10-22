@@ -1,11 +1,96 @@
+<!-- File: index.html -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Title</title>
-</head>
-<body>
-	Test
-</body>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- TODO 1: Add a favicon and a title -->
+    <title>Hi, I'm Alan</title>
+    <link rel="icon" type="image/x-icon" href="">
+  </head>
+  <body>
+    <nav>
+      <!-- TODO 2: Add an logo and a name -->
+      <a href="./" id="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Alan</span>
+      </a>
+
+      <button id="anchor-list-trigger" onclick="toggleAnchorList()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+      </button>
+
+      <!-- TODO 3: Add the URL to your GitHub Pages repository -->
+      <ul id="anchor-list">
+        <li><a href="https://github.com/alanlovetrains/alanlovetrains.github.io">GitHub</a></li>
+      </ul>
+    </nav>
+
+    <div id="section-container">
+      <section id="hero">
+        <!-- TODO 4: Assign an h1 heading and a short description about you -->
+        <!-- TODO 4: Replace the 2 <span>...</span> tags with 2 appropriate tags -->
+        <div>
+          <h1>Hi, I'm Alan</h1>
+          <span>Year 2 CS Student in HKUST</span>
+        </div>
+        <!-- TODO 4: Add an avatar -->
+        <img id="avatar" width="128" height="128" src="" />
+      </section>
+
+      <hr />
+
+      <section id="about">
+        <h2>About</h2>
+        <!-- TODO 5: A short paragraph about you -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam suscipit incidunt quisquam nulla sed dolore sapiente delectus quo, nesciunt, ipsam esse ab, ad voluptatum illum sint id cum et.
+        Laborum, autem id nihil, nulla expedita ipsum aliquam reiciendis eius culpa accusantium est repellendus harum veritatis exercitationem et. Excepturi cumque officiis iure provident consequatur nobis impedit nostrum obcaecati ipsa ipsum.
+        Necessitatibus ipsa totam, nulla nobis sapiente sit molestias consectetur architecto corrupti, perspiciatis praesentium officia pariatur alias rerum deleniti deserunt debitis dolorem illum eos id atque quia exercitationem quis? Ut, nulla!
+        Iste voluptatum quam consequatur numquam omnis animi commodi quos laudantium distinctio vero repellat, temporibus quia alias repudiandae libero iure fuga nisi quo quaerat molestiae perferendis qui eligendi? Dolore, deserunt laboriosam!</p>
+      </section>
+
+      <hr />
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <!-- TODO 6: Elaborate more skills using HTML elements -->
+        <div id="skill-set">
+          <div class="skill">
+            <img width="24" alt="HTML Icon" src="/assets/html.svg">
+            <span>HTML</span>
+          </div>
+          <div class="skill">
+            <img width="24" alt="HTML Icon" src="/assets/css.svg">
+            <span>CSS</span>
+          </div>
+          <div class="skill">
+            <img width="24" alt="HTML Icon" src="/assets/js.png">
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <!-- TODO 7: Put your HKUST email without the domain -->
+        <p>ycleeao</p>
+      </section>
+    </div>
+
+    <footer>An assessment for COMP 4900 (Fall 2025)</footer>
+
+    <script>
+      function toggleAnchorList() {
+        const anchor_list = document.getElementById("anchor-list");
+        if (window.getComputedStyle(anchor_list).getPropertyValue("--show-anchor-list") == "none") {
+          anchor_list.style.setProperty("--show-anchor-list", "block");
+        }
+        else {
+          anchor_list.style.setProperty("--show-anchor-list", "none");
+        }
+      }
+    </script>
+  </body>
 </html>
