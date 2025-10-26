@@ -38,7 +38,7 @@ body {
 }
 
 /* TODO 9: Fill in the media query list to support responsive design */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     body {
         padding: 2rem 20%;
     }
@@ -193,6 +193,7 @@ section {
 /* TODO 11: Declare the display property to align the children elements horizontally */
 #skill-set {
     display: flex;
+    flex-wrap: wrap;
 
     gap: 1rem;
 
